@@ -18,7 +18,7 @@ algorithm is independent of the graphics library.
 ## Optimizations
 
 Largers screen sizes, like 800x800, can not be handled by the current branch implementation. However, there is a branch 
-called `numpy` which is used to speed up the simulation using numpy array as "minimap" to store the current state of the screen.
+called [numpy](https://github.com/mpioski/falling-simulation/tree/numpy) which is used to speed up the simulation using numpy array as "minimap" to store the current state of the screen.
 
 
 ## Installation
