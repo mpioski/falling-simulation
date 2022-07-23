@@ -13,8 +13,8 @@ class Particles:
             Stone.colour: Stone
         }
 
-    def get_new_position(self, grid, position, colour):
+    def get_new_position(self, display, position, colour):
         particles = self.__get_particles()
         particle_object = particles[colour]
-        return particle_object(grid=grid, position=position).rule()
+        return particle_object(grid=display, position=position).rule()
 

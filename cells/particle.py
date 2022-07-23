@@ -42,7 +42,7 @@ class Particle(ABC):
 
     def is_empty(self, x, y):
         if not self.is_out_of_bounds(x, y):
-            return self.grid[x, y] == None or BLACK
+            return self.grid.get_at((x, y))[:3] == BLACK
         raise OutOfBound
 
     def is_out_of_bounds(self, x: int, y: int):
@@ -52,4 +52,4 @@ class Particle(ABC):
         :param y:
         :return:
         """
-        return any([(a >= b) for a, b in zip((x, y), self.grid.shape)])
+        return any([(a >= b) for a, b in zip((x, y), self.grid.get_size())])
