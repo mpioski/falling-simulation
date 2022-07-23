@@ -33,8 +33,8 @@ class Grid(Particles):
 
     def read_and_update_pixels(self):
         with Timer("read_and_update_pixels"):
-            for x in reversed(range(300)):
-                for y in reversed(range(300)):
+            for x in reversed(range(self.size[0])):
+                for y in reversed(range(self.size[1])):
                     try:
                         self.move_particle(x=x, y=y)
                     except OutOfBound:
