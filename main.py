@@ -1,5 +1,3 @@
-import numpy as np
-
 import pygame
 from pygame.locals import *
 import sys
@@ -17,7 +15,6 @@ class ParticlesSimulation:
         self.fps_clock = pygame.time.Clock()
         self.dragging = False
         self.grid = Grid(display=self.display, size=self.screen_size)
-        self.matrix = np.empty(shape=self.screen_size, dtype=object)
 
     def start(self):
         while 1:
@@ -36,7 +33,7 @@ class ParticlesSimulation:
 
             self.grid.read_and_update_pixels()
             pygame.display.update()
-            self.fps_clock.tick(120)
+            self.fps_clock.tick(60)
 
 
 if __name__ == "__main__":
