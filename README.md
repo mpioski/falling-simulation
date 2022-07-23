@@ -12,7 +12,7 @@ algorithm is independent of the graphics library.
 - Add gas
 - Add oil
 - Add fire
-- Switch to OpenGL
+- Switch to [ModernGL](https://github.com/moderngl/moderngl)
 - Multithreading for each row of the grid
 
 ## Optimizations
